@@ -12,7 +12,7 @@ let toDoList = document.querySelector('.myTasks')
   
 // LOCAL STORAGE
 
-let tasks = JSON.parse(localStorage.getItem('tasks')) || 
+let tasks = JSON.parse(localStorage.getItem('tasks')) || []
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault()

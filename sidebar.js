@@ -49,16 +49,16 @@ function tarehe() {
 
 	// let timing = document.querySelector('.ogo');
 
-	if (hourNow === 0  || hourNow < 12) {			
+	if (hourNow === 0   && hourNow < 12) {			
 
 		document.querySelector('.greeting').innerHTML = 'Good Morning';
 		document.querySelector('.greet').innerHTML='&#127749;'
 
-	} else if (hourNow >= 12 || hourNow < 17) {
+	} else if (hourNow >= 12 && hourNow < 17) {
 		document.querySelector('.greeting').innerHTML = 'Good Afternoon';
 		document.querySelector('.greet').innerHTML='☀️'
 
-	} else if (hourNow >= 17 || hourNow < 21) {
+	} else if (hourNow >= 17 && hourNow < 21) {
 		document.querySelector('.greeting').innerHTML = 'Good Evening';
 		document.querySelector('.greet').innerHTML='&#127769;'
 		
