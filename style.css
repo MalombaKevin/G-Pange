@@ -182,6 +182,11 @@ input[type='checkbox'] {
 	background-color: blueviolet;
 }
 
+.date{
+	font-size: large;
+	font-weight: 500;
+}
+
 @media only screen and (max-width: 768px) {
 	/* For mobile phones: */
 
@@ -200,7 +205,7 @@ input[type='checkbox'] {
 		/* border: 1px solid gold; */
 		background-color: blue;
 		padding: 1em;
-		height: 38vh;
+		height: 45vh;
 	}
 
 	.section2 {
