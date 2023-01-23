@@ -1,0 +1,147 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>G-PANGE</title>
+</head>
+
+<body onload="tarehe()">
+    <div class="main">
+
+        <div class="sidebar">
+
+            <div class="section1">
+
+                <h4 class="greeting"></h4>
+                <h2 class="greet"></h2>
+
+            </div>
+
+            <div class="section2">
+                <p><span class="todoName">G-PANGE</span> <br> <span class="todoIntro">A Task Management Application For
+                        Better Productivity</span></p>
+            </div>
+
+            <div class="footer">
+                <p>A Kevin Malomba Production</p>
+              </div>
+
+            <div class="section3">
+                <div class="completed">
+                    <p>Compelete</p>
+                    <button class="taskButton">Hi</button>
+                </div>
+                <div class="pending">
+                    <p>Pending</p>
+                    <button class="taskButton">Hi</button>
+                </div>
+
+                <div class="total">
+                    <p>Total</p>
+                    <button class="taskButton">Hi</button>
+
+                </div>
+            </div>
+
+       
+
+        </div>
+
+        <div class="content">
+
+            <div class="taskSection">
+                <div class="analytics">
+                    <h3>G-PANGE ANALYTICS</h3>
+                    <hr>
+
+
+
+                    <div class="data">
+
+                        <div class="completeTask">
+                            <p>Complete</p>
+                            <p id="completeTotal"></p>
+                            <button class="taskButton">Hi</button>
+                        </div>
+
+                        <div class="pendingTassk">
+                            <p>Pending</p>
+                            <p id="pendingTotal"></p>
+                            <button class="taskButton">Hi</button>
+                        </div>
+
+                        <div class="totalTasks">
+                            <p>Total</p>
+                            <p id="taskTotal"></p>
+                            <button class="taskButton">HI</button>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="task">
+
+                    <form action="" id="form">
+
+                        <div class="date">
+                            <h2 class="year"></h2>
+                        </div>
+
+                        <input type="text" name="" id="taskInput" placeholder="eg. Check on typescript">
+                      
+                        <button type="submit"> Add Task</button>
+                    </form>
+
+                </div>
+
+               
+            </div>
+            <div class="myTasksList">
+                <ul class="myTasks">
+                    <li>
+                        <div class="checked">
+                            <input type="checkbox" name="tasks" id="1" >
+                            
+                        </div>
+
+                        <div> <p contenteditable="True"> Task 1</p>
+                           </div>
+
+                        <button class="delete-task" >
+                            <ion-icon name="trash" class="deleteButton"></ion-icon>
+                        </button>
+                    </li>
+
+                    <li class="complete">
+                        <div class="checked">
+                            <input type="checkbox" name="tasks" id="1" >
+                            
+                        </div>
+
+                        <div> <p> Task 2</p>
+                           </div>
+
+                        <button class="delete-task" >
+                            <ion-icon name="trash" class="deleteButton"></ion-icon>
+                        </button>
+                    </li>
+
+                </ul>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script src="/sidebar.js"></script>
+    <script src="/todo.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
