@@ -144,6 +144,7 @@ input {
 	border-radius: 70em;
 	padding: 30%;
 	border: none;
+	display: none;
 }
 
 .myTasks li {
@@ -154,10 +155,19 @@ input {
 	margin-top: 1em;
 }
 .myTasks {
-	width: 70%;
+	width: 80%;
 	margin: auto;
 	margin-top: 5%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2px;
+	justify-content: center;
 }
+
+.myTasks li {
+	list-style: none;
+	flex: 33.333333%;
+  }
 
 input[type='checkbox'] {
 	font-size: large;
@@ -185,6 +195,11 @@ input[type='checkbox'] {
 .date{
 	font-size: large;
 	font-weight: 500;
+}
+
+myTasks{
+	display: flex;
+	justify-content: space-around;
 }
 
 @media only screen and (max-width: 768px) {
