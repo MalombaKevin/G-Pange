@@ -280,7 +280,7 @@ myTasks{
 	.analytics {
 		grid-area: analytics;
 		margin-top: -200px;
-		height: 15vh;
+		height: 20vh;
 	}
 
 	input {
