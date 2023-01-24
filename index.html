@@ -23,25 +23,17 @@
             <div class="section2">
                 <p><span class="todoName">G-PANGE</span> <br> <span class="todoIntro">A Task Management Application For
                         Better Productivity</span></p>
-            </div>
+            </div> <br> <br>
 
-            <div class="footer">
-                <p>A Kevin Malomba Production</p>
-              </div>
 
-            <div class="section3">
-                
-            </div>
+            <div class="section2a">
+                <div class="analytica">
+                    <div class="date">
+                        <span></span> <span class="day"></span> <span class="year"></span>
+                        <hr>
 
-       
-
-        </div>
-
-        <div class="content">
-
-            <div class="taskSection">
-                <div class="analytics">
-                    <h3>G-PANGE ANALYTICS</h3>
+                    </div>
+                    <h3>TASK ANALYTICS</h3>
                     <hr>
 
 
@@ -68,38 +60,88 @@
 
 
                     </div>
-                </div>
-
-                <div class="task">
-
-                    <form action="" id="form">
-
-                        <div class="date">
-                           <span>Today: </span> <span class="day"></span> <span class="year"></span>
-                            
-                        </div>
-
-                        <input type="text" name="" id="taskInput" placeholder="eg. Check on typescript">
-                      
-                        <button type="submit"> Add Task</button>
-                    </form>
 
                 </div>
 
-               
+
+                <div class="footer">
+                    <p>A Kevin Malomba Production</p>
+                </div>
+
+
+
+
+
             </div>
-            <div class="myTasksList">
-                <ul class="myTasks">
-                    
-                  
+        </div>
 
-                </ul>
+        <div class="content">
+
+            <div class="task-form">
+                <h4 align="center">Create Task</h4>
+                <hr>
+
+                <form action="">
+
+                    <input type="text" name="title" id="title" placeholder="Task Title " required><br>
+
+                    <textarea name="description" id="description" cols="30" rows="10" placeholder="Task Description "
+                        required></textarea><br>
+
+                    <span style="color:white">Date Due: </span> <input type="date" name="date" id="date" class="dateDue"
+                        required><br>
+
+                    <button>Add Task</button>
+                </form>
+
+                <form action="" style="display:none" id="editForm">
+
+                    <input type="text" name="title" id="title" placeholder="Task Title " required><br>
+
+                    <textarea name="description" id="description" cols="30" rows="10" placeholder="Task Description "
+                        required></textarea><br>
+
+                    <span style="color:white">Date Due: </span> <br><input type="date" name="date" id="date" class="dateDue"
+                        required><br>
+
+                    <input type="text" id="id" name="id" hidden>
+
+                    <button>Update</button>
+                </form>
             </div>
 
 
+
+
+
+            <div class="task-pending">
+                <h3 align="center" style="color:orangered; font-weight:bold"><ion-icon name="time-outline"
+                        style="color:white; font-weight:bold;font-size: xx-large;"></ion-icon></h3>
+                <hr>
+                <div class="taskPendingData">
+
+                </div>
+
+            </div>
+
+            <div class="task-complete">
+                <h3 align="center" style="color:orangered; font-weight:bold"><ion-icon name="medal"
+                        style="color:gold; font-weight:bold;font-size: xx-large;"></ion-icon></h3>
+                <hr>
+     <div class="taskCompleteData">
+        
+     </div>
+
+            </div>
 
         </div>
+
+
+
+
     </div>
+
+    </main>
 
     <script src="sidebar.js"></script>
     <script src="todo.js" defer></script>
