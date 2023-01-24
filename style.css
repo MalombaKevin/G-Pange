@@ -153,6 +153,8 @@ input {
 	background-color: rgb(243, 21, 21);
 	color: wheat;
 	margin-top: 1em;
+	list-style: none;
+	flex: 33.333333%;
 }
 .myTasks {
 	width: 80%;
@@ -164,10 +166,9 @@ input {
 	justify-content: center;
 }
 
-.myTasks li {
-	list-style: none;
-	flex: 33.333333%;
-  }
+/* .myTasks li {
+	
+  } */
 
 input[type='checkbox'] {
 	font-size: large;
@@ -298,5 +299,15 @@ myTasks{
 	}
 	.sidebar .footer {
 		display: none;
+	}
+
+	.myTasks li {
+		display: flex;
+		justify-content: space-between;
+		background-color: rgb(243, 21, 21);
+		color: wheat;
+		margin-top: 1em;
+		list-style: none;
+		flex: 33.333333%;
 	}
 }
