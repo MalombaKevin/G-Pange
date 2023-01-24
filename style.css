@@ -248,12 +248,12 @@ myTasks{
 		text-align: center;
 		padding: 0.5em;
 		background: linear-gradient(to right, rgb(236, 3, 3), rgb(14, 11, 230));
-		margin-top: -10em;
-		height: 15vh;
+		margin-top: -1em;
+		height: 20vh;
 	}
 
 	.myTasksList{
-		margin-top: -10em;
+		margin-top: -1em;
 	}
 
 	.content {
@@ -279,9 +279,13 @@ myTasks{
 
 	.analytics {
 		grid-area: analytics;
-		margin-top: -200px;
-		height: 20vh;
+		margin-top: -90px;
+		height: 19vh;
 	}
+	.analytics h3 {
+		font-size: small;
+	}
+
 
 	input {
 		width: 100%;
