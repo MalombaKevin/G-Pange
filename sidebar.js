@@ -49,7 +49,7 @@ function tarehe() {
 
 	// let timing = document.querySelector('.ogo');
 
-	if (hourNow === 0   && hourNow < 12) {			
+	if (hourNow >=0  && hourNow < 12) {			
 
 		document.querySelector('.greeting').innerHTML = 'Good Morning';
 		document.querySelector('.greet').innerHTML='&#127749;'
@@ -62,7 +62,7 @@ function tarehe() {
 		document.querySelector('.greeting').innerHTML = 'Good Evening';
 		document.querySelector('.greet').innerHTML='&#127769;'
 		
-	} else 
+	}  else if (hourNow >= 21)
 	{
 		document.querySelector('.greeting').innerHTML = 'Good Night';
 		document.querySelector('.greet').innerHTML='&#127773;'
