@@ -2,9 +2,9 @@
 let form = document.querySelector('form');
 
 //  statistics zone
-let completeTask = document.getElementById('completeTotal');
-let pendingTask = document.getElementById('pendingTotal');
-let totalTask = document.getElementById('taskTotal');
+let completeTask = document.querySelector('.completeTotal');
+let pendingTask = document.querySelector('.pendingTotal');
+let totalTask = document.querySelector('.taskTotal');
 
 // get the ul list
 let toDoList = document.querySelector('.myTasks');

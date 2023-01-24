@@ -220,7 +220,7 @@ myTasks{
 		/* border: 1px solid gold; */
 		background-color: blue;
 		padding: 1em;
-		height: 45vh;
+		height: 40vh;
 	}
 
 	.section2 {
@@ -237,13 +237,15 @@ myTasks{
 		justify-content: space-around;
 		color: white;
 		margin-top: 1%;
+		text-align: center;
 	}
 
 	.content {
 		grid-area: content;
 		/* border: 1px solid blue; */
 		background-color: gold;
-		height: 70vh;
+		height: auto;
+		/* margin-top: -10%; */
 	}
 
 	.taskSection {
