@@ -6,6 +6,14 @@ let toDos = [];
 let editForm = document.querySelector('#editForm');
 let taskCompleteContainer = document.querySelector('.taskCompleteData');
 
+//  statistics zone
+let completeTask = document.querySelector('.completeTotal');
+let pendingTask = document.querySelector('.pendingTotal');
+let totalTask = document.querySelector('.taskTotal');
+
+// button
+let buttonEditTask = document.querySelector('taskEdit');
+
 const generateID = () => {
 	return Math.floor(Math.random() * 100);
 };
@@ -29,6 +37,7 @@ form.addEventListener('submit', (e) => {
     form.reset()
 
 	displayTaskPending();
+	countTask()
 });
 
 function displayTaskPending() {
@@ -39,12 +48,14 @@ function displayTaskPending() {
 			taskPendingContainer.innerHTML += `<div class="dataToDo">
         <h3>${todo.title}<h3>
          <h3>${todo.description}</h3>
-          <h6>${todo.date}</h6>  
+          <h3>${todo.date}</h3>  
            <h6>
-          <button onClick="updateTask(${todo.id})"><ion-icon name="create"></ion-icon></button> <button onclick=complete(${todo.id})><ion-icon name="checkmark-done-circle"></ion-icon></button> <button onClick="deleteTask(${todo.id})"> <ion-icon name="trash"></ion-icon></button>
+          <button onClick="updateTask(${todo.id})" class='taskEdit'><ion-icon name="create"></ion-icon></button> <button onclick=complete(${todo.id})><ion-icon name="checkmark-done-circle"></ion-icon></button> <button onClick="deleteTask(${todo.id})"> <ion-icon name="trash"></ion-icon></button>
           </h6>
           </div>`;
 		});
+
+		countTask()
 }
 
 // Delete
@@ -66,8 +77,19 @@ let updateTask = (id) => {
 	editForm.style.display = 'block';
 	form.style.display = 'none';
 };
+
+// buttonEditTask.addEventListener('click', (e) => {
+	
+// 	editTitle=document.querySelector('.edit')
+// 	editTitle.innerHTML=`
+// 	<h4 align="center" >Update Task</h4>
+// 	`
+
+// });
+
 editForm.addEventListener('submit', (e) => {
 	e.preventDefault();
+
 
 	let title = editForm.title.value;
 	let description = editForm.description.value;
@@ -87,6 +109,7 @@ editForm.addEventListener('submit', (e) => {
     editForm.reset()
 	displayTaskPending();
     displayTaskComplete();
+	countTask()
 });
 
 function displayTaskComplete() {
@@ -97,10 +120,11 @@ function displayTaskComplete() {
 			taskCompleteContainer.innerHTML += `<div class="dataToDo">
         <h3>${todo.title}<h3>
          <h3>${todo.description}</h3>
-          <h6>${todo.date}</h6>  
+          <h3>${todo.date}</h3>  
            <h6>
-          <button onClick="updateTask(${todo.id})"><ion-icon name="create"></ion-icon></button> <button onclick=complete(${todo.id})><ion-icon name="checkmark-done-circle"></ion-icon></button> <button onClick="deleteTask(${todo.id})"> <ion-icon name="trash"></ion-icon></button>
+          <button onClick="updateTask(${todo.id})" class='taskEdit'><ion-icon name="create"></ion-icon></button> <button onclick=complete(${todo.id})><ion-icon name="checkmark-done-circle"></ion-icon></button> <button onClick="deleteTask(${todo.id})"> <ion-icon name="trash"></ion-icon></button>
           </h6>
+		  
           </div>`;
 		});
 }
@@ -120,9 +144,16 @@ function displayTaskComplete() {
  }
 
 
-// let inComplete =(id)=>{
-//    let todo=toDos.find(todo=>todo.id ===id)
-//    todo.completed=false
-//    console.log(todo)
-//    displayTaskComplete()
-// }
+ function countTask() {
+	const completedTasksArray = toDos.filter((toDo) => {
+		toDo.Completed === true;
+	});
+
+	totalTask.textContent = toDos.length;
+	completeTask.textContent = completedTasksArray.length;
+	console.log(completedTasksArray.length);
+	pendingTask.textContent = toDos.length - completedTasksArray.length;
+	
+	
+// console.log( toDos.length);
+}
