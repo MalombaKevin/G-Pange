@@ -64,7 +64,7 @@
                 </div>
 
 
-                <div class="footer">
+                <div class="footer" style="display:none">
                     <p>A Kevin Malomba Production</p>
                 </div>
 
@@ -77,10 +77,15 @@
 
         <div class="content">
 
+          
+
             <div class="task-form">
+
+ 
+
                 <div class="edit">
-                <h4 align="center" >TASK</h4>
-            </div>
+                    <h4 align="center">TASK</h4>
+                </div>
                 <hr>
 
                 <form action="">
@@ -103,8 +108,8 @@
                     <textarea name="description" id="description" cols="30" rows="10" placeholder="Task Description "
                         required></textarea><br>
 
-                    <span style="color:white">Date Due: </span> <br><input type="date" name="date" id="date" class="dateDue"
-                        required><br>
+                    <span style="color:white">Date Due: </span> <br><input type="date" name="date" id="date"
+                        class="dateDue" required><br>
 
                     <input type="text" id="id" name="id" hidden>
 
@@ -113,45 +118,56 @@
             </div>
 
 
-
-
-
+            
             <div class="task-pending">
+
+                <div class="buttonComplettion" style="margin-top: -30px;text-align: center;">
+                    <button class="incompleteButtonTop" style="background-color: orangered;padding: 5px;color: white;border: none;">Complete Tasks</button>
+               
+                    <button class="completeButtonTop" style="background-color: blueviolet;padding: 5px;color: white;border: none;">Incomplete Tasks</button>
+                
+
+            </div>
                 <h3 align="center" style="color:orangered; font-weight:bold"><ion-icon name="time-outline"
                         style="color:white; font-weight:bold;font-size: xx-large;"></ion-icon></h3>
                 <hr>
 
-                <div class="dataTitle">
+                <!-- <div class="dataTitle">
                     <h3>Title</h3>
                     <h3>Description</h3>
                     <h3 style="margin-left: -59px;">Date</h3>
                     <h3></h3>
                     <h3></h3>
-                </div>
-                
+                </div> -->
+
                 <div class="taskPendingData">
 
-                    
-                    
+         <h1 style="text-align: center;">Add A Task</h1>
+
                 </div>
 
             </div>
 
-            <div class="task-complete">
+            <div class="task-complete" style="display:none">
+
+                <div class="buttonComplettion" style="margin-top: -30px;text-align: center;">
+                    <button class="completeButtonTop2" style="background-color: blueviolet;padding: 5px;color: white;border: none;">InComplete Tasks</button>
+                    <button class="incompleteButtonTop2" style="background-color: orangered;padding: 5px;color: white;border: none;">Incomplete Tasks</button>
+
                 <h3 align="center" style="color:orangered; font-weight:bold"><ion-icon name="medal"
                         style="color:gold; font-weight:bold;font-size: xx-large;"></ion-icon></h3>
                 <hr>
 
-                <div class="dataTitle">
+                <!-- <div class="dataTitle">
                     <h3>Title</h3>
                     <h3>Description</h3>
                     <h3 style="margin-left: -59px;">Date</h3>
                     <h3></h3>
                     <h3></h3>
+                </div> -->
+                <div class="taskCompleteData">
+
                 </div>
-     <div class="taskCompleteData">
-        
-     </div>
 
             </div>
 

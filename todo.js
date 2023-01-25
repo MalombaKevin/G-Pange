@@ -34,6 +34,8 @@ form.addEventListener('submit', (e) => {
 	};
 
 	toDos.push(toDo);
+
+	// console.log(toDos);
     form.reset()
 
 	displayTaskPending();
@@ -64,6 +66,7 @@ function deleteTask(id) {
 	console.log(toDos);
 	displayTaskPending();
     displayTaskComplete()
+	
 }
 
 // Update
@@ -127,6 +130,7 @@ function displayTaskComplete() {
 		  
           </div>`;
 		});
+		countTask()
 }
  let complete =(id)=>{
     let todo=toDos.find(todo=>todo.id ===id)
@@ -141,6 +145,7 @@ function displayTaskComplete() {
         displayTaskComplete()
         displayTaskPending()
     }
+	countTask()
  }
 
 
@@ -157,3 +162,33 @@ function displayTaskComplete() {
 	
 // console.log( toDos.length);
 }
+
+// get complete and incomplete buttons
+
+let incompleteButtonContainer= document.querySelector('.incompleteButtonTop')
+
+let completeButtonContainer= document.querySelector('.completeButtonTop')
+
+let completeTaskDiv = document.querySelector('.task-complete')
+
+let incompleteTaskDiv = document.querySelector('.task-pending')
+
+
+incompleteButtonContainer.addEventListener('click', ()=>{
+	incompleteTaskDiv.style.display="none"
+	completeTaskDiv.style.display="block"
+})
+
+
+let incompleteButtonContainer2= document.querySelector('.incompleteButtonTop2')
+
+let completeButtonContainer2= document.querySelector('.completeButtonTop2')
+
+
+completeButtonContainer2.addEventListener('click', ()=>{
+	incompleteTaskDiv.style.display="block"
+	completeTaskDiv.style.display="none"
+})
+
+
+
